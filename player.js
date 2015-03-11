@@ -2,6 +2,7 @@ module.exports = function() {
     this.name = '';
     this.cards = [];
     this.allSeven = [];
+    this.hand = null;
 
     this.getName = function() {
         return this.name;
@@ -19,5 +20,9 @@ module.exports = function() {
         // else
             ret.push(this.cards[i].toShortDisplayString());
         return ret.join(',');
+    };
+
+    this.setHand = function(hand) {
+        this.hand = hand;
     };
 };
